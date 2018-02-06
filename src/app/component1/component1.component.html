@@ -1,0 +1,28 @@
+<div>
+  <p>
+    zmienna z parent componentu 1: {{variable1}}
+  </p>
+  <p>
+    zmienna z parent componentu 2: {{variable2}}
+  </p>
+</div>
+<hr/>
+<div>
+  <p>
+    output z child1: {{fromChild1}}
+  </p>
+  <p>
+    output z child2: {{fromChild2}}
+  </p>
+</div>
+<hr/>
+
+<div>
+  <h3>Child component1</h3>
+  <app-nested1 [number]="variable1" (onSomething)="handleChild1($event)"></app-nested1>
+</div>
+<hr/>
+<div>
+  <h3>Child component2</h3>
+  <app-nested2 [name]="variable2" (onSomething)="handleChild2($event)" ></app-nested2>
+</div>

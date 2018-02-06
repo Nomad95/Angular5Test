@@ -1,0 +1,9 @@
+1 let ee = new EventEmitter();
+2 ee.subscribe((name: string) => console.log(`Hello ${name}`));
+3 ee.emit("Nate");
+4
+5 // -> "Hello Nate"
+
+
+class41. Here when we say @HostBinding('attr.class')
+cssClass = 'item'; we’re saying that we want to attach the CSS class item to the host element.
