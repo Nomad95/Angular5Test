@@ -1,0 +1,17 @@
+<div >
+  <h2 >Demo Form: Sku</h2>
+  <form [formGroup]="myForm"
+        (ngSubmit)="onSubmit(myForm.value)" novalidate>
+    <div >
+      <label for="skuInput">SKU</label>
+      <input type="text" id="skuInput" placeholder="SKU" [formControl]="myForm.controls['sku']" >
+    </div>
+
+    <button type="submit">Submit</button>
+    <div *ngIf="!myForm.valid">
+      INVALID!!!
+    </div>
+
+    <!--<div *ngIf="sku.hasError('required')">SKU is required</div>-->
+  </form>
+</div>

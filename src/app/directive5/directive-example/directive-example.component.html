@@ -1,0 +1,50 @@
+<div>
+  <div *ngIf="someComponentVariable">
+    <p>Some text</p>
+  </div>
+
+  <div *ngIf="someNumber > 0">
+    <p>Some text</p>
+  </div>
+
+
+  <div [ngSwitch]="myVar">
+    <p *ngSwitchCase="0">Jest zerem</p>
+    <p *ngSwitchCase="1">Jest jedynka</p>
+    <p *ngSwitchCase="2">Jest dwojka</p>
+    <p *ngSwitchCase="3">Jest trojka</p>
+    <p *ngSwitchDefault>jest czyms innym</p>
+  </div>
+
+
+  <div [style.background-color]="colorVar">
+    <p>Some text</p>
+  </div>
+
+  <div [ngStyle] ="{'color': 'white', 'background-color': 'blue'}">
+    <p>Some text</p>
+  </div>
+
+
+  <div [ngClass]="{'green-bgr': isGreen}" >
+    <p>Some text</p>
+  </div>
+
+  <div [ngClass]="['green-bgr', 'blue-text']" >
+    <p>Some text</p>
+  </div>
+
+
+  <div *ngFor="let number of numbers">
+    <p>number: {{number}}</p>
+  </div>
+
+  <div *ngFor="let number of numbers; let idx = index">
+    <p>number {{idx + 1}} = {{number}}</p>
+  </div>
+
+  <div appSomeDirective = "true">
+    <p> schowany</p>
+  </div>
+
+</div>

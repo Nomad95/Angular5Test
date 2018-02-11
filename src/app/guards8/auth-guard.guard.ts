@@ -1,0 +1,14 @@
+import { Injectable } from '@angular/core';
+import { CanActivate, ActivatedRouteSnapshot, RouterStateSnapshot } from '@angular/router';
+import { Observable } from 'rxjs/Observable';
+
+@Injectable()
+export class AuthGuardGuard implements CanActivate {
+  canActivate(
+    next: ActivatedRouteSnapshot,
+    state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
+    //jakas logika sprawdzajaca np czy user ma uprawnienia
+
+    return false;
+  }
+}
